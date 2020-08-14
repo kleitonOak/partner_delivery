@@ -1,0 +1,23 @@
+version: '3.2'
+services:
+  db:
+    container_name: ze_db
+    image: mongo
+    networks:
+      - ze_db
+    volumes:
+      - db_data:/data/db
+      - ./db_data:/db_data
+    ports:
+      - "27017:27017"
+    environment:
+      MONGODB_USER: root
+      MONGODB_PASS: root
+      MYSQL_DATABASE: ze_delivery
+      MONGO_DATA_DIR: /data/db
+
+networks:
+  ze_db:
+
+volumes:
+  db_data:

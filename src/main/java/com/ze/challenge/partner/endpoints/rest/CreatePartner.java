@@ -22,7 +22,7 @@ public class CreatePartner extends Base{
     private CreateUseCase createUseCase;
 
     @ApiResponses(value = {
-            @ApiResponse(code = 200, response = PartnerDto.class, message = ""),
+            @ApiResponse(code = 200,response = PartnerDto.class, message = ""),
             @ApiResponse(code = 400, message = "Bad request"),
             @ApiResponse(code = 500, message = "Failure", response = Exception.class)})
     @PostMapping(value = BASE_API_PATH, produces = MediaType.APPLICATION_JSON_VALUE)
