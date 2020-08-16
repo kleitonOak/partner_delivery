@@ -4,6 +4,7 @@ import com.ze.challenge.partner.core.entity.Partner;
 import com.ze.challenge.partner.core.usercase.find.FindUseCase;
 import com.ze.challenge.partner.endpoints.rest.converter.Converter;
 import com.ze.challenge.partner.endpoints.rest.dto.PartnerDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ import java.util.Objects;
 @Slf4j
 @RestController
 @Validated
+@Api(value = "Partner")
 public class FindPartner extends Base{
     private static final String API_PATH = BASE_API_PATH + "/{id}";
 

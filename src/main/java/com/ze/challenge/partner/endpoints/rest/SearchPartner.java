@@ -4,6 +4,7 @@ import com.ze.challenge.partner.core.entity.Partner;
 import com.ze.challenge.partner.core.usercase.search.SearchUseCase;
 import com.ze.challenge.partner.endpoints.rest.converter.Converter;
 import com.ze.challenge.partner.endpoints.rest.dto.PartnerDto;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @Validated
+@Api(value = "Partner")
 public class SearchPartner extends Base{
     SearchUseCase searchUseCase;
 
