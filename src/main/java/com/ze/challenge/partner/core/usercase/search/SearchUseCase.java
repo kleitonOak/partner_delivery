@@ -9,10 +9,10 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class SearchUseCase {
-
+    private static final int MAX_RECORD_LIST = 1;
     private Search search;
 
-    public List<Partner> search(Double latitude, Double longitude){
-        return search.search(latitude,longitude);
+    public List<Partner> search(Double longitude, Double latitude){
+        return search.search(longitude,latitude, MAX_RECORD_LIST);
     }
 }

@@ -5,4 +5,5 @@ import com.ze.challenge.partner.core.entity.Partner;
 public interface Find {
 
     public Partner find(String id);
+    public Partner findByDocument(String document);
 }

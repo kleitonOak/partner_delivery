@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface Search {
 
-    public List<Partner> search(Double latitude, Double longitude);
+    public List<Partner> search(Double longitude, Double latitude, Integer limit);
 }

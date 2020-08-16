@@ -1,6 +1,8 @@
 package com.ze.challenge.partner.endpoints.rest;
 
 import com.ze.challenge.partner.core.entity.Partner;
+import com.ze.challenge.partner.core.exceptions.CoreBusinessException;
+import com.ze.challenge.partner.core.exceptions.CoreIntegrationException;
 import com.ze.challenge.partner.core.usercase.create.CreateUseCase;
 import com.ze.challenge.partner.endpoints.rest.converter.Converter;
 import com.ze.challenge.partner.endpoints.rest.dto.PartnerDto;
@@ -22,9 +24,8 @@ public class CreatePartner extends Base{
     private CreateUseCase createUseCase;
 
     @PostMapping(value = BASE_API_PATH, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<PartnerDto> createPartner(@RequestBody PartnerDto payload) {
+    public ResponseEntity<PartnerDto> createPartner(@RequestBody PartnerDto payload) throws CoreIntegrationException, CoreBusinessException {
         Partner entity = createUseCase.create(Converter.dtoToEntity(payload));
-
         return new ResponseEntity<>(Converter.entityToDto(entity), HttpStatus.CREATED);
     }
 }
