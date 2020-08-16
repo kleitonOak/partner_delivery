@@ -10,6 +10,7 @@ public class CreateUseCase {
     private Create create;
 
     public Partner create(Partner partner){
+        partner.setId(null);
         return create.create(partner);
     }
 }

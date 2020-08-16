@@ -7,12 +7,14 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import java.io.Serializable;
+
 import static com.ze.challenge.partner.endpoints.rest.resources.RestConstants.*;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class PartnerDto {
+public class PartnerDto implements Serializable {
     private String id;
 
     @Size(max = 255, message = NAME_IS_TOO_BIG)

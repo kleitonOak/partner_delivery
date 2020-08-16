@@ -29,7 +29,7 @@ public class PartnetRepository implements Find, Create, Search {
     public Partner find(String id) {
         final Query query = new Query();
         query.addCriteria(Criteria.where("id").is(id));
-        return (Partner) mongoTemplate.find(query, Partner.class);
+        return (Partner) mongoTemplate.findOne(query, Partner.class);
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.ze.challenge.partner.core.entity.Partner;
 import com.ze.challenge.partner.core.usercase.find.FindUseCase;
 import com.ze.challenge.partner.endpoints.rest.converter.Converter;
 import com.ze.challenge.partner.endpoints.rest.dto.PartnerDto;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,10 +19,11 @@ import java.util.Objects;
 @Slf4j
 @RestController
 @Validated
+@AllArgsConstructor
 public class FindPartner extends Base{
     private static final String API_PATH = BASE_API_PATH + "/{id}";
 
-    FindUseCase findUseCase;
+    private FindUseCase findUseCase;
 
     @GetMapping(value = API_PATH, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<PartnerDto> getPartner(@PathVariable String id) {
