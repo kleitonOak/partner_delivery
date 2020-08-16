@@ -1,9 +1,12 @@
 package com.ze.challenge.partner.core.entity;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class CoverageArea {
-    private String type;
+    private GeometryType type;
     private List<List<List<List<Integer>>>>coordinates;
 
 }

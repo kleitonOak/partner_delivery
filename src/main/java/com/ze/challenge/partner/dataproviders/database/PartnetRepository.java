@@ -4,6 +4,7 @@ import com.ze.challenge.partner.core.entity.Partner;
 import com.ze.challenge.partner.core.usercase.create.Create;
 import com.ze.challenge.partner.core.usercase.find.Find;
 import com.ze.challenge.partner.core.usercase.search.Search;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -14,9 +15,10 @@ import java.util.List;
 
 @Repository
 @Data
+@AllArgsConstructor
 public class PartnetRepository implements Find, Create, Search {
 
-    MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     @Override
     public Partner create(Partner partner) {

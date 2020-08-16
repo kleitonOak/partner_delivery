@@ -1,6 +1,8 @@
 package com.ze.challenge.partner.core.entity;
 
+import lombok.Data;
 
+@Data
 public class Partner {
     private String id;
     private String tradingName;

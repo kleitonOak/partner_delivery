@@ -1,8 +1,10 @@
 package com.ze.challenge.partner.core.entity;
 
-import java.util.List;
+import lombok.Data;
 
+import java.util.List;
+@Data
 public class Address {
-    private String type;
+    private GeometryType type;
     private List<Double> coordinates;
 }

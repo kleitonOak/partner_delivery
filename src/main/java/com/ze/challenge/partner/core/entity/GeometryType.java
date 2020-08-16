@@ -1,13 +1,10 @@
-package com.ze.challenge.partner.endpoints.rest.dto;
+package com.ze.challenge.partner.core.entity;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.Optional;
-
-public enum GeometryTypeDto implements Serializable {
+@ToString
+public enum GeometryType implements Serializable {
     POINT("Point"),
     LINESTRING("LineString"),
     POLYGON("Polygon"),
@@ -19,7 +16,7 @@ public enum GeometryTypeDto implements Serializable {
 
     private String type;
 
-    GeometryTypeDto(String type){
+    GeometryType(String type){
         this.type = type;
     }
 
