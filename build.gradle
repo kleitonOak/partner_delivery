@@ -18,6 +18,21 @@ repositories {
 	mavenCentral()
 }
 
+task upDataBaseTask(type: Exec) {
+	workingDir "$projectDir"
+	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+		commandLine 'cmd', '/c', 'docker-compose -f src/main/java/com/ze/challenge/partner/configuration/devops/local/docker-compose.yml down'
+		commandLine 'cmd', '/c', 'docker-compose -f src/main/java/com/ze/challenge/partner/configuration/devops/local/docker-compose.yml up -d'
+	} else {
+		commandLine 'sh', '-c', 'docker-compose -f src/main/java/com/ze/challenge/partner/configuration/devops/local/docker-compose.yml down'
+		commandLine 'sh', '-c', 'docker-compose -f src/main/java/com/ze/challenge/partner/configuration/devops/local/docker-compose.yml up -d'
+	}
+}
+
+bootRun {
+	dependsOn 'upDataBaseTask'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
