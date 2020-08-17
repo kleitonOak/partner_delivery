@@ -51,7 +51,7 @@ MongoDB using Geospatial Queries. Using databasename `ze_delivery` and collectio
 
 ## Documentation
 
-- [ Endpoints / Swagger](http://localhost:808o/swagger)
+- [ Endpoints / Swagger](http://localhost:8080/swagger)
 
 ## Researchs
 - [ Validate GeoJson format](https://geojsonlint.com)
