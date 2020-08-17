@@ -57,7 +57,7 @@ public class PartnetRepository implements Find, Create, Search {
         GeospatialIndex geospatialIndexCoverageArea = new GeospatialIndex("coverageArea");
         geospatialIndexCoverageArea.typed(GeoSpatialIndexType.GEO_2DSPHERE);
         GeospatialIndex geospatialIndexAddress = new GeospatialIndex("address");
-        geospatialIndexCoverageArea.typed(GeoSpatialIndexType.GEO_2DSPHERE);
+        geospatialIndexAddress.typed(GeoSpatialIndexType.GEO_2DSPHERE);
 
         TextIndexDefinition documentIndexDefinition = TextIndexDefinition.builder().onField("document").build();
 
