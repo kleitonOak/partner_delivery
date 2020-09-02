@@ -1,4 +1,4 @@
-# Partnet Challenge By [José Kleiton](https://github.com/kleitonOak)
+# Partner Challenge By [José Kleiton](https://github.com/kleitonOak)
 
 API that keeps Partner operations.
 - Save in a database a partner defined by all the fields represented by the JSON and rules below:
