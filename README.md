@@ -1,4 +1,4 @@
-# Ze Delivery Challenge By [José Kleiton](https://github.com/kleitonOak)
+# Partnet Challenge By [José Kleiton](https://github.com/kleitonOak)
 
 API that keeps Partner operations.
 - Save in a database a partner defined by all the fields represented by the JSON and rules below:
@@ -22,7 +22,7 @@ API that keeps Partner operations.
 }
 ```
 
-Important to say that Geo Information provided by [ZE COMPANY](https://github.com/ZXVentures/ze-code-challenges/blob/master/files/pdvs.json) was not valid to input information due the [Right Hand Rule violation](https://mapster.me/right-hand-rule-geojson-fixer)  
+Check invalid input information caused by [Right Hand Rule violation](https://mapster.me/right-hand-rule-geojson-fixer)  
 - Find by ID: Return a specific partner by its id with all the fields presented above.
 - Search partner: Given a specific location (coordinates long and lat), search the nearest partner which the coverage area includes the location.
 
